@@ -33,3 +33,12 @@ This example throws and error.
 
 #### Now We will Fix this.
 [Fixing Handling Errors in callbacks](callback/handling-error-fix.js)
+
+### Pros & Cons of Callbacks.
+#### Pros
+  1. Simplicity
+  2. Popularity
+
+#### Cons:
+  1. Lack of Readability
+  2. Callback Hell.
