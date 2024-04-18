@@ -28,4 +28,8 @@ hence this is an asynchronous function, but if you remove setTimeout and only ca
 Callbacks are not always Asynchronous.
 
 ## Handling Errors in callbacks.
+This example throws and error.
 [Handling Errors in callbacks](callback/handling-error.js)
+
+#### Now We will Fix this.
+[Fixing Handling Errors in callbacks](callback/handling-error-fix.js)
