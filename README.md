@@ -26,3 +26,5 @@ Here when setTimeout is call, Javascript engine puts this into Message Queue and
 hence this is an asynchronous function, but if you remove setTimeout and only call "callback()", then this becomes synchromous function.
 [!NOTE]
 Callbacks are not always Asynchronous.
+
+## Handling Errors in callbacks.
