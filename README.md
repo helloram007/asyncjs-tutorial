@@ -42,3 +42,56 @@ This example throws and error.
 #### Cons:
   1. Lack of Readability
   2. Callback Hell.
+
+## Promises
+### What are Promises?
+In JavaScript, promises are objects that represent the eventual completion or failure of an asynchronous operation. They are commonly used for handling asynchronous operations such as fetching data from a server, reading files, or executing other time-consuming tasks without blocking the main execution thread.
+
+Promises have three states:
+  1. Pending: Initial state, neither fulfilled nor rejected.
+  2. Fulfilled: The operation completed successfully.
+  3. Rejected: The operation failed.
+
+Promises can be created using the Promise constructor. The constructor takes a function with two parameters: resolve and reject. Inside this function, you perform the asynchronous operation, and when it's completed, you call resolve to indicate success or reject to indicate failure.
+
+A Promise is a JavaScript object that links "Producing Code" and "Consuming Code".
+"Producing Code" can take some time and "Consuming Code" must wait for the result.
+
+Promise Signature
+```
+  const myPromise = new Promise(function(myResolve, myReject) {
+  // "Producing Code" (May take some time)
+
+    myResolve(); // when successful
+    myReject();  // when error
+  });
+
+  // "Consuming Code" (Must wait for a fulfilled Promise).
+  myPromise.then(
+    function(value) { /* code if successful */ },
+    function(error) { /* code if some error */ }
+  );
+```
+** Basic Example **
+
+    const myPromise = new Promise((resolve, reject) => {
+      // Perform asynchronous operation
+      setTimeout(() => {
+        const randomNumber = Math.random();
+        if (randomNumber > 0.5) {
+          resolve(randomNumber); // Operation succeeded
+        } else {
+          reject(new Error("Operation failed")); // Operation failed
+        }
+      }, 1000);
+    });
+
+    // Using the promise
+    myPromise
+      .then((result) => {
+        console.log("Success:", result);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+```
