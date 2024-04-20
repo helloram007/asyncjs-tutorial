@@ -1,0 +1,13 @@
+{
+  "name": "top-level",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-top-level-wait.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
